@@ -30,7 +30,6 @@ void __fastcall potok2::Execute()
 		if(Sbt->WaitFor(0)==wrSignaled)
 		{
 		Synchronize(&UpdateCaption);
-		Sbt->ResetEvent();
 		}
 	}
 	//---- Place thread code here ----
@@ -41,16 +40,10 @@ void __fastcall potok2::Execute()
   {
    String s1;
 	Form1->Label3->Caption = "";
-			for (int i = 0; i < 512; i++)
+		for (int i = 0; i < 16; i++)
 		{
 		s1 += reinterpret_cast<char*>(DataBuffer)[i];
-		if(i%16 == 15)
-		{
-			Form1->Label3->Caption += s1;
-			Form1->Label3->Caption += "\n";
-			s1="";
 		}
-		}
-
-
+		Form1->Label3->Caption += s1;
+		Sbt->ResetEvent();
   }

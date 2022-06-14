@@ -20,36 +20,21 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
-	  if(yaPotok==NULL)
-		yaPotok=new potok(stranica, false);
-		Label2->Caption="Текущая страница ";
+       	yaPotok=new potok(stranica, false);
+		Label2->Caption="Текущий сектор ";
 		Label2->Caption+=stranica;
+		Button1->Enabled=false;
+		Button2->Enabled=true;
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button2Click(TObject *Sender)
 {
-	Label1->Caption="";
-	Label2->Caption="";
 	stranica=0;
-	Label3->Caption="";
-    yaPotok = NULL;
+	yaPotok->Terminate();  // стоп поток
+	yaPotok = NULL;
+	Button1->Enabled=true;
+	Button2->Enabled=false;
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm1::Button3Click(TObject *Sender)
-{
-stranica++;
-Label2->Caption="Текущая страница ";
-Label2->Caption+=stranica;
-yaPotok=new potok(stranica, false);
-}
-//---------------------------------------------------------------------------
-void __fastcall TForm1::Button4Click(TObject *Sender)
-{
-if (stranica>0) {
-	stranica--;
-Label2->Caption="Текущая страница ";
-Label2->Caption+=stranica;
-yaPotok=new potok(stranica, false);
-}
-}
-//---------------------------------------------------------------------------
+
+

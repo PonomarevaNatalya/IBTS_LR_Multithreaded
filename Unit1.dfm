@@ -2,35 +2,41 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 441
-  ClientWidth = 900
+  ClientHeight = 194
+  ClientWidth = 559
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OldCreateOrder = True
+  PixelsPerInch = 96
   TextHeight = 15
   object Label1: TLabel
-    Left = 65
-    Top = 24
-    Width = 152
-    Height = 65
-    Caption = 'Label1'
+    Left = 16
+    Top = 55
+    Width = 3
+    Height = 15
   end
   object Label2: TLabel
-    Left = 400
-    Top = 160
-    Width = 75
-    Height = 25
-    Caption = 'Label2'
+    Left = 384
+    Top = 152
+    Width = 3
+    Height = 15
   end
   object Label3: TLabel
-    Left = 600
+    Left = 16
+    Top = 85
+    Width = 3
+    Height = 15
+  end
+  object Label4: TLabel
+    Left = 16
     Top = 24
-    Width = 233
-    Height = 137
-    Caption = 'Label3'
+    Width = 132
+    Height = 15
+    Caption = #1055#1077#1088#1074#1099#1077' 16 '#1073#1072#1081#1090' '#1089#1077#1082#1090#1086#1088#1072
   end
   object Button1: TButton
     Left = 400
@@ -47,25 +53,16 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = #1042#1099#1082#1083
+    Enabled = False
     TabOrder = 1
     OnClick = Button2Click
   end
-  object Button3: TButton
-    Left = 400
+  object Edit1: TEdit
+    Left = 352
     Top = 82
-    Width = 75
-    Height = 25
-    Caption = #1058#1091#1076#1099
+    Width = 191
+    Height = 28
     TabOrder = 2
-    OnClick = Button3Click
-  end
-  object Button4: TButton
-    Left = 400
-    Top = 113
-    Width = 75
-    Height = 25
-    Caption = #1057#1102#1076#1099
-    TabOrder = 3
-    OnClick = Button4Click
+    TextHint = #1047#1072#1076#1072#1081#1090#1077' '#1096#1072#1075' ('#1087#1086' '#1091#1084#1086#1083#1095#1072#1085#1080#1102' 100)'
   end
 end

@@ -14,14 +14,12 @@ __published:	// IDE-managed Components
 	TButton *Button1;
 	TLabel *Label1;
 	TButton *Button2;
-	TButton *Button3;
-	TButton *Button4;
 	TLabel *Label2;
 	TLabel *Label3;
+	TEdit *Edit1;
+	TLabel *Label4;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);
-	void __fastcall Button3Click(TObject *Sender);
-	void __fastcall Button4Click(TObject *Sender);
 private:
 	class potok *yaPotok;	// User declarations
 public:		// User declarations
